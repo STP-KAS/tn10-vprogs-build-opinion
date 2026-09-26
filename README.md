@@ -109,6 +109,8 @@ These are the claims I would hand to someone working on the node or the vprogs c
 | [vprogs-tn-desk-public](https://github.com/STP-KAS/vprogs-tn-desk-public) | Earlier desk note. Pins in it are the 25 Sep pins (`3a61c0b`, tictactoe `ba05d924`). Those pins moved on 26 Sep, as above. Settlement snapshot is the earlier DAA, not the evening one. The SilverScript point (release tag v1.0.0, language constant still 0.1.0) is a separate fact. This opinion does not recompile it. The public copy includes receive addresses and UTXO counts. |
 | [grok-build-vprogs](https://github.com/STP-KAS/grok-build-vprogs) | Public. The description still says "Private." The README says "Private on purpose." It is the wallet-load note: mass table, short bursts, one hosted game whose L1 transactions were included while that session's demo state stayed put. The demo has moved since that session. |
 
+*Update 26 Sep 2026 (repo review, facts only):* the stale "private" labels noted in the round2, round4 and grok-build-vprogs rows have since been removed. Those repos, and the grok-build-vprogs description, now say public.
+
 [sixpack.wtf](https://github.com/STP-KAS/sixpack.wtf), [kaspa-master-file](https://github.com/STP-KAS/kaspa-master-file), [kns-spec](https://github.com/STP-KAS/kns-spec), and [kns-tn10-testing](https://github.com/STP-KAS/kns-tn10-testing) are on the same account and are outside this stress reading.
 
 `grok-bot-vprogs` and `vprogs-tn-desk` are private. This opinion does not use them. The public "clean copies" are squashed history. Check a number against the log file that was copied with it.
