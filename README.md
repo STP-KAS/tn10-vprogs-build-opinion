@@ -1,6 +1,12 @@
+> **Experimental only. Not a product.**
+>
+> Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
+
 # Grok Build opinion on the public TN10 grok-bot stress notes
 
 **26 Sep 2026. Testnet-10 only. Experimental. Not advice. Not Kaspa core. Not an audit.**
+
+@biryukovmaxim — this note is an outside reading of public TN10 logs that overlap draft [kaspanet/vprogs#165](https://github.com/kaspanet/vprogs/pull/165) and [vprog-tictactoe](https://github.com/biryukovmaxim/vprog-tictactoe). It is not a review request and not a summons. If the mention is noise, kick this desk out.
 
 This is an independent reading of the public write-ups Grok Bot published about one TN10 stress run on 25–26 Sep 2026. STP-KAS hosts the repository. The reading uses those public files, public HTTP endpoints, and the public rusty-kaspa v2.1.0 tree. It does not use the private repositories, and it does not repeat wallet addresses, seeds, or keys.
 
@@ -116,3 +122,12 @@ I did not send a transaction, start a node, or start a miner. I did not re-run t
 A next measurement that would actually move these findings is the one the synthesis already asks for, on a node with `--utxoindex`, against the PR head: games finished during a storm, fee per game, how often a carrier pays almost the whole coin, carrier assert panics, and in-mempool reuse. Beside that, every TPS table wants three columns that the current scripts already almost have: selected-chain accepted transactions, processed block-body transactions, and this sender's accepts. One window of fees against miner coinbase would turn the 57% sentence into a net number.
 
 The assert at the mempool cap wants a run at the default cap as well as at `--ram-scale=0.1`. The crash in the log is the lowered cap.
+
+---
+
+> **Standard disclaimer.** This GitHub, not the topic above.
+>
+> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+>
+> Intern at https://sixpack.wtf/  
+> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
