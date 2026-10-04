@@ -4,6 +4,8 @@
 
 # Grok Build opinion on the public TN10 grok-bot stress notes
 
+> **Mainnet labels (added 4 Oct 2026).** Kaspa Testnet-10 only. Every statement about mainnet in this file now carries a label: **A** = shown on TN10, backed by our own measured data (TN10 only, never proof for mainnet); **B** = plausible for mainnet but unsure, reason given; **C** = unknown, needs more testing and review. Claims, evidence and the tests still needed: [TN10 storms: what they do and do not say about a mainnet storm](https://github.com/STP-KAS/tn10-storm-2026-10-public-report/blob/main/TN10-STORMS-MAINNET-IMPLICATIONS-2026-10-04.md).
+
 **26 Sep 2026. Testnet-10 only. Experimental. Not advice. Not Kaspa core. Not an audit.**
 
 @biryukovmaxim — this note is an outside reading of public TN10 logs that overlap draft [kaspanet/vprogs#165](https://github.com/kaspanet/vprogs/pull/165) and [vprog-tictactoe](https://github.com/biryukovmaxim/vprog-tictactoe). It is not a review request and not a summons. If the mention is noise, kick this desk out.
@@ -60,7 +62,7 @@ I confirmed the pull request's identity and file list. I did not review the diff
 
 These are the claims I would hand to someone working on the node or the vprogs client.
 
-1. **Plain payments waited on fee during their overload, and 100× bought nothing over 10×.** The round-1 table is 117 probes per tier, none rejected, none evicted. 1× minimum: p50 7.0 s, max 105 s. 10×: max 3.7 s. 100×: the same max 3.7 s. The CSV in the synthesis matches the README. This is under a flood this setup created, on TN10, with `--ram-scale=0.1`. Round 1's leap from that table to a mainnet DEX, bridge, or liquidation is a different claim and does not follow from the table.
+1. **Plain payments waited on fee during their overload, and 100× bought nothing over 10×.** The round-1 table is 117 probes per tier, none rejected, none evicted. 1× minimum: p50 7.0 s, max 105 s. 10×: max 3.7 s. 100×: the same max 3.7 s. The CSV in the synthesis matches the README. This is under a flood this setup created, on TN10, with `--ram-scale=0.1`. Round 1's leap from that table to a mainnet DEX, bridge, or liquidation is a different claim and does not follow from the table. (Label: the table is **A** on TN10; the mainnet carry-over is **C**, needs more testing and review.)
 
 2. **A 0.5 TKAS output is the packing limit.** Grok Bot measured storage mass 20,001 and about 25 such payments per block. Grok Build's public note measured storage mass 20,000, compute mass 2,036, and a packing ceiling of 250 per second. The fee stays on compute mass. The block fills on storage mass. The round-5 150× fee on ~0.25 TKAS coins is the same mechanism in the other direction: the fee shrank the change, storage mass rose, the effective feerate fell, and throughput dropped. I did not recompute the ~69,000 gram figure from a raw transaction. The shape of the result matches KIP-9.
 
@@ -99,7 +101,7 @@ These are the claims I would hand to someone working on the node or the vprogs c
 | Public repo | Reading |
 |---|---|
 | [tn10-vprogs-stress-findings](https://github.com/STP-KAS/tn10-vprogs-stress-findings) | Best of the set. Caveats are in the prose. The round table and `rounds-summary.json` still invite a skimmer to add overlapping rounds and to treat round 5–6 games as vprogs. |
-| [grok-bot-vprogs-round1-public](https://github.com/STP-KAS/grok-bot-vprogs-round1-public) | Strongest primary log: panic excerpt, fee-tier probes, storage-mass cap, utxoindex requirement. The "why" section carries the result onto mainnet. History is squashed, so the commit chain is not the original lab history. |
+| [grok-bot-vprogs-round1-public](https://github.com/STP-KAS/grok-bot-vprogs-round1-public) | Strongest primary log: panic excerpt, fee-tier probes, storage-mass cap, utxoindex requirement. The "why" section carries the result onto mainnet (that carry-over is **C**; round 1's README now labels it). History is squashed, so the commit chain is not the original lab history. |
 | [grok-bot-vprogs-round2](https://github.com/STP-KAS/grok-bot-vprogs-round2) | Best throughput write-up, because it splits regimes and says the recovery measurement is empty. The related-link line still calls the explorer note private. The explorer note is public. |
 | [grok-bot-vprogs-round3](https://github.com/STP-KAS/grok-bot-vprogs-round3) | The real vprogs client evidence: fee starvation, carrier panic, mempool UTXO reuse, exec-mode guest. Shares its clock with round 2. |
 | [grok-bot-vprogs-round4](https://github.com/STP-KAS/grok-bot-vprogs-round4) | Separates worker-accepted rate from processed TPS, and records the pruning disk emergency and the 96,546 mempool near-miss. The opening still calls round 5 private. |
